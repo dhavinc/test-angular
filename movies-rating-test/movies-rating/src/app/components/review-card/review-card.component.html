@@ -1,19 +1,24 @@
-
-  <div class="full">
-    <div class="service_img">
-      <img
-        class="img-responsive"
-        [src]="reviewData?.multimedia?.src"
-        [alt]="reviewData?.display_title"
-      />
-    </div>
-    <div class="service_cont">
-      <h3>{{reviewData?.display_title}}</h3>
-      <p>
-        {{reviewData?.summary_short}}
-      </p>
-      <div class="bt_cont">
-        <a [title]="reviewData?.link?.suggested_link_text" class="btn sqaure_bt" [href]="reviewData?.link?.url">Read it</a>
-      </div>
+<div class="full">
+  <div class="service_img">
+    <img
+      class="img-responsive"
+      [src]="reviewData?.multimedia?.src"
+      [alt]="reviewData?.display_title"
+    />
+  </div>
+  <div class="service_cont">
+    <h3>{{ reviewData?.display_title }}</h3>
+    <p>
+      {{ reviewData?.summary_short }}
+    </p>
+    <div class="bt_cont">
+      <a
+        [title]="reviewData?.link?.suggested_link_text"
+        class="btn sqaure_bt"
+        target="_blank"
+        [href]="reviewData?.link?.url"
+        >Read it</a
+      >
     </div>
   </div>
+</div>

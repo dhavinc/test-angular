@@ -12,7 +12,7 @@ export class ReviewCardComponent implements OnInit {
   ngOnInit(): void {
     this.reviewData.summary_short = this.reviewData.summary_short
       ? this.reviewData.summary_short.length > 100
-        ? this.reviewData.summary_short.substring(0, 100)
+        ? this.reviewData.summary_short.substring(0, 97) + '...'
         : this.reviewData.summary_short
       : 'No Summary';
   }

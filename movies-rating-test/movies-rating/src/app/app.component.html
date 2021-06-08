@@ -1,3 +1,6 @@
+<div [class.show]="loading" class="bg_load" [@enterAnimation]>
+  <img class="loader_animation" src="assets/img/loaders/loader_1.png" alt="#" />
+</div>
 <app-nav-bar></app-nav-bar>
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
@@ -26,7 +29,17 @@
       >
         <app-review-card [reviewData]="review"></app-review-card>
       </div>
+      <div
+        *ngIf="hasMore"
+        class="col-md-4 service_blog margin_bottom_50 load_more"
+      >
+        <div>
+          <button (click)="loadMore()" class="btn btn-success">
+            Load more
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- end section -->
 </div>
-<!-- end section -->
